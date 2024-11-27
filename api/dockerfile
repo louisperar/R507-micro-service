@@ -12,6 +12,5 @@ RUN apk update && \
 
 WORKDIR /app
 COPY . /app
-RUN pip install --no-cache-dir -r requirements.txt
-EXPOSE 5000
+EXPOSE 5001
 CMD ["python3", "flask_exo.py"]
