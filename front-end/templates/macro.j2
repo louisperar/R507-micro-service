@@ -1,0 +1,24 @@
+{% macro form() %}
+    <h2>Formulaire pour ajouter un livre</h2>
+    <form action="http://api:5001/livres/ajouter" method="post">
+        <ul>
+            <li>
+                <label for="titre">titre:</label>
+                <input type="text" id="titre" name="titre" required/></input>
+            </li>
+            <li>
+                <label for="pitch">résumé:</label>
+                <input type="text" id="pitch" name="pitch" required/></input>
+            </li>
+            <li>
+                <label for="auteur">auteur:</label>
+                <input type="text" id="auteur" name="auteur" required></input>
+            </li>
+            <li>
+                <label for="date">date:</label>
+                <input type="date" id="date" name="date" required></input>
+            </li>
+            <button href="http://api:5001/livres/ajouter">envoyer</button>
+        </ul>
+    </form>
+{% endmacro %}
